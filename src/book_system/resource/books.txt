@@ -1,0 +1,30 @@
+1,The Pragmatic Programmer,true
+2,Clean Code,true
+3,Design Patterns,false
+4,You Don't Know JS,true
+5,JavaScript: The Good Parts,false
+6,Introduction to Algorithms,true
+7,Refactoring,true
+8,The Mythical Man-Month,true
+9,Artificial Intelligence: A Modern Approach,false
+10,Computer Networking: A Top-Down Approach,true
+11,The Clean Coder,true
+12,Code Complete,false
+13,Effective Java,true
+14,Python Crash Course,true
+15,The Art of Computer Programming,false
+16,Deep Learning with Python,true
+17,Structure and Interpretation of Computer Programs,true
+18,Operating System Concepts,false
+19,Database System Concepts,true
+20,The C Programming Language,true
+21,React Up and Running,true
+22,Node.js Design Patterns,true
+23,Software Architecture in Practice,false
+24,Machine Learning Yearning,true
+25,The Phoenix Project,false
+26,Building Microservices,true
+27,Domain-Driven Design,true
+28,Distributed Systems:true
+29,Compilers: Principles, Techniques, and Tools,false
+30,Modern Software Engineering,true
