@@ -9,12 +9,22 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("사용자 ID를 입력하세요: ");
-        String userId = scanner.nextLine();
-        System.out.println("비밀번호를 입력하세요:");
-        String password = scanner.nextLine();
+        String userId = null;
+        String password = null;
+        while(true) {
+            System.out.println("사용자 ID를 입력하세요: ");
+            userId = scanner.nextLine();
+            System.out.println("비밀번호를 입력하세요:");
+            password = scanner.nextLine();
+            boolean loginStatus = userService.login(userId, password);
 
-        userService.login(userId, password);
+            if(loginStatus) {
+                System.out.println("로그인 성공");
+                break;
+            } else {
+                System.out.println("로그인 실패");
+            }
+        }
 
         boolean systemStatus = true;
 
@@ -53,9 +63,9 @@ public class App {
                     break;
                 }
             }
-
-
         }
+
+        scanner.close();
 
 
     }
