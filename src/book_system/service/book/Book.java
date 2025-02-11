@@ -34,7 +34,7 @@ public class Book {
     }
 
     public void returnBook() {
-        this.userId = -1;
+        this.userId = null;
         this.isBorrow = false;
     }
 

@@ -11,7 +11,7 @@ import book_system.service.book.Book;
 
 public class Data {
     private final String USER_FILE_PATH = "src/book_system/resource/user.csv";
-    private final String BOOK_FILE_PATH = "src/book_system/resource/book.txt";
+    private final String BOOK_FILE_PATH = "src/book_system/resource/books.txt";
 
     public List<User> parseUsers() {
         List<User> users = new ArrayList<>();
@@ -19,7 +19,7 @@ public class Data {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] userDetails = line.split(",");
-                int id = Integer.parseInt(userDetails[0]);
+                String id = userDetails[0];
                 String password = userDetails[1];
                 String name = userDetails[2];
                 User user = new User(id, password, name);

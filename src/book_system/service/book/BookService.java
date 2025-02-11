@@ -20,11 +20,11 @@ public class BookService {
             .orElse(null);
         
         if(book == null) {
-            System.out.println("Book not found");
+            System.out.println("존재하지 않는 책입니다.");
             return;
         }
         book.borrow(userId);
-        System.out.println("Book borrowed");
+        System.out.println("도서 '"+book.getTitle()+"' 대출이 완료되었습니다.");
     }
 
     public void returnBook(int bookId) {
@@ -34,11 +34,11 @@ public class BookService {
             .orElse(null);
         
         if(book == null) {
-            System.out.println("Book not found");
+            System.out.println("존재하지 않는 책입니다.");
             return;
         }
         book.returnBook();
-        System.out.println("Book returned");
+        System.out.println("'"+book.getTitle()+"' 반납이 완료되었습니다.");
     }
 
 }

@@ -9,14 +9,14 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your user id:");
+        System.out.println("사용자 ID를 입력하세요: ");
         String userId = scanner.nextLine();
-        System.out.println("Enter your password:");
+        System.out.println("비밀번호를 입력하세요:");
         String password = scanner.nextLine();
 
         userService.login(userId, password);
 
-        System.out.println("Enter the number of the book you want to borrow:");
+        System.out.println("도서 ID를 입력하세요: ");
         int bookId = scanner.nextInt();
 
         bookService.borrowBook(bookId, userId);
