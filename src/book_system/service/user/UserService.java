@@ -15,14 +15,14 @@ public class UserService {
         .orElse(null);
     
         if(user == null) {
-            System.out.println("User not found");
+            System.out.println("존재하지 않는 유저입니다");
             return false;
         }
         if(!user.checkPassword(password)) {
-            System.out.println("Password is incorrect");
+            System.out.println("비밀번호가 일치하지 않습니다. 다시 확인해주세요");
             return false;
         }
-        System.out.println(user.getName() + "님 환영합니다!!");
+        System.out.println(user.getName() + "님, 환영합니다!");
         return true;
     }
 }

@@ -9,17 +9,54 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your user id:");
+        System.out.println("사용자 ID를 입력하세요: ");
         String userId = scanner.nextLine();
-        System.out.println("Enter your password:");
+        System.out.println("비밀번호를 입력하세요:");
         String password = scanner.nextLine();
 
         userService.login(userId, password);
 
-        System.out.println("Enter the number of the book you want to borrow:");
-        int bookId = scanner.nextInt();
+        boolean systemStatus = true;
 
-        bookService.borrowBook(bookId, userId);
+        while (systemStatus) {
+            System.out.println("도서 목록 조회-----(1)");
+            System.out.println("대출-------------(2)");
+            System.out.println("반납-------------(3)");
+            System.out.println("종료-------------(4)");
+            int menu = scanner.nextInt();
+
+            switch (menu) {
+                case 1: {
+                    bookService.showBooks();
+                    break;
+                }
+                case 2: {
+                    System.out.println("대출할 도서 ID를 입력하세요: ");
+                    int bookId = scanner.nextInt();
+
+                    bookService.borrowBook(bookId, userId);
+                    break;
+                }
+                case 3: {
+                    System.out.println("반납할 도서 ID를 입력하세요: ");
+                    int bookId = scanner.nextInt();
+
+                    bookService.returnBook(bookId, userId);
+                    break;
+                }
+                case 4: {
+                    systemStatus = false;
+                    break;
+                }
+                default: {
+                    System.out.println("메뉴를 잘못 입력했습니다. 다시 선택해주세요.");
+                    break;
+                }
+            }
+
+
+        }
+
 
     }
 }

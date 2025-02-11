@@ -24,18 +24,24 @@ public class Book {
         return this.isBorrow;
     }
 
-    public void borrow(String userId) {
+    public boolean borrow(String userId) {
         if(this.isBorrow) {
-            System.out.println("This book is already borrowed.");
-            return;
+            System.out.println("이미 대출된 책입니다.");
+            return false;
         }
         this.userId = userId;
         this.isBorrow = true;
+        return true;
     }
 
-    public void returnBook() {
-        this.userId = -1;
+    public boolean returnBook(String userId) {
+        if (this.userId != userId) {
+            System.out.println("존재하지 않는 대출 정보입니다.");
+            return false;
+        }
+        this.userId = null;
         this.isBorrow = false;
+        return true;
     }
 
 }
