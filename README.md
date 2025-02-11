@@ -1,18 +1,38 @@
-## Getting Started
+## 도서관 관리 시스템 📚
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+사용자 로그인, 도서 대출, 반납 기능을 제공하는 프로그램
 
-## Folder Structure
+****로그인 기능****
+- 입력 형태: 사용자 ID, 비밀번호
+- 출력 형태: "홍길동님, 환영합니다."
 
-The workspace contains two folders by default, where:
+****도서 대출 기능****
+- 입력 형태: 도서 ID
+- 출력 형태: "도서 '자바 프로그래밍'이 성공적으로 대출되었습니다."
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+****도서 반납 기능****
+- 입력 형태: 도서 ID
+- 출력 형태: "도서 '자바 프로그래밍'이 성공적으로 반납되었습니다."
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+****실행 예시****
+```
+사용자 ID를 입력하세요: user123
+비밀번호를 입력하세요: ****
+user123님, 환영합니다.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+도서 목록 조회-----(1)
+대출-------------(2) ✅
+반납-------------(3)
+종료-------------(4)
 
-## Dependency Management
+대출할 도서 ID를 입력하세요: 1
+도서 'The Pragmatic Programmer' 대출이 완료되었습니다.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+도서 목록 조회-----(1)
+대출-------------(2) 
+반납-------------(3) ✅
+종료-------------(4)
+
+반납할 도서 ID를 입력하세요: 1
+'The Pragmatic Programmer' 반납이 완료되었습니다.
+```
